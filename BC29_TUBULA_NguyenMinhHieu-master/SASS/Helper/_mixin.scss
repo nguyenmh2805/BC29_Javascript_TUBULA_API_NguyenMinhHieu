@@ -1,0 +1,26 @@
+@mixin d-flex ($gap, $j-ctn, $a-item) {
+    display: flex;
+    justify-content: $j-ctn;
+    align-items: $a-item;
+    gap: $gap;
+}
+
+@mixin text ($fontSize, $fontWeight, $color) {
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    color: $color;
+}
+
+
+
+$names: twitter, facebook, youtube, instagram;
+
+@each $name in $names {
+    .#{$name} {
+        margin-left: 10px;
+
+        i {
+            font-size: $fs-3;
+        }
+    }
+}

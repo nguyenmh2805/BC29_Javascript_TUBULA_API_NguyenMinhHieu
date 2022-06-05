@@ -1,0 +1,51 @@
+@import "../Helper/variable";
+@import "../Helper/mixin";
+
+.card-group {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: $color-bg;
+    background-image: url(../../Image/Wave_White_bottom_right_shape_01.png);
+    background-size: cover;
+    background-position: top;
+
+    // .card-container {}
+
+    .card-item {
+        padding: 0 1.5rem 0 1.5rem;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: $mg-1;
+    }
+
+    .card {
+        border: none;
+        padding: 0;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        transition: all 0.5s;
+
+        &:hover {
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        }
+
+        .card-body {
+            text-align: center;
+
+            .card-title {
+                @include text($fs-2, $fw-2, $color-pink);
+            }
+
+            .card-text {
+                @include text($fs-6, $fw-3, $color-heading);
+                margin: 5px 0 5px;
+            }
+
+            .card-desc {
+                @include text($fs-3, $fw-1, $color-dark-1);
+            }
+        }
+
+
+    }
+
+}

@@ -1,0 +1,135 @@
+@import "../Helper/variable";
+@import "../Helper/mixin";
+
+
+.footer {
+    // background-color: $color-pink-1;
+    background-image: url(../../Image/footer_background.jpg);
+    background-position: bottom;
+    background-size: cover;
+    padding: 15rem 0 15rem;
+
+    .content {
+        margin-bottom: 30px;
+        
+        .heading {
+            @include text($fs-6, $fw-3, $color-white-1);
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .footer-contact {
+        .info {
+
+            li {
+                @include d-flex(10px, flex-start, center);
+                padding: 10px 0 10px;
+
+                i {
+                    @include text($fs-3, $fw-2, $color-white-1);
+                }
+
+                p {
+                    @include text($fs-3, $fw-1, $color-white-1);
+                }
+            }
+
+
+            .social {
+                a {
+                    color: $color-white-1;
+
+                    i {
+                        transition: all 0.8s;
+                    }
+
+                    i:hover {
+                        color: $color-blue-1;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .footer-link {
+        .links {
+            li {
+                padding: 10px 0 10px;
+                border-bottom: 1px solid rgb(85, 81, 81);
+
+                a {
+                    text-decoration: none;
+                    @include text($fs-3, $fw-1, $color-white-1);
+
+
+                    &:hover {
+                        color: #8a8a8a;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-about {
+        .links {
+            li {
+                padding: 10px 0 10px;
+                border-bottom: 1px solid rgb(85, 81, 81);
+
+                a {
+                    text-decoration: none;
+                    @include text($fs-3, $fw-1, $color-white-1);
+
+
+                    &:hover {
+                        color: #8a8a8a;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-news {
+        .form {
+            margin-bottom: 15px;
+
+            .input {
+                display: flex;
+                flex-direction: column;
+                font-size: 1.5rem;
+                border: 1px solid gray;
+                border-radius: 50px;
+                overflow: hidden;
+
+                input {
+                    padding: 8px 20px 8px;
+                    text-align: center;
+                    background-color: transparent;
+                    border: none;
+                    outline: none;
+                    transition: all .7s ease;
+
+                    &:focus {
+                        background-color: $color-white-1;
+                    }
+                }
+            }
+        }
+
+        .btn-subscribe {
+            width: 100%;
+            border: none;
+            background-color: $color-white-1;
+            letter-spacing: 1.5px;
+            @include text($fs-2, $fw-2, $color-dark-1);
+
+            &:hover {
+                background-color: $color-pink-1;
+                box-shadow: 0 0 0 1px #b61984 inset;
+                border: 1px solid $color-white-1;
+                color: $color-white-1;
+            }
+        }
+    }
+}

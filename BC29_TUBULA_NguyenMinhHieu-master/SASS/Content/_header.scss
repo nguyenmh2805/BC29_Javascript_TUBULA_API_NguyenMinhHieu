@@ -1,0 +1,129 @@
+@import "../Helper/variable";
+@import "../Helper/mixin";
+
+#navbar {
+    position: fixed;
+    z-index: 99;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    padding: 20px 0;
+    transition: all 0.8s ease-in-out;
+}
+
+#navbar.header-scroll {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    padding: 5px 0;
+    background-color: $color-white-1;
+
+    img {
+        display: none;
+    }
+}
+
+
+.navbar {
+    .navbar-contain{
+        display: flex;
+    }
+
+    .navbar-brand {
+        margin-left: 0;
+    }
+
+    .navbar-nav {
+        margin-right: 0;
+
+        .nav-item {
+            padding: 0 5px 0 5px;
+
+            .nav-link {
+                font-size: $fs-3;
+                font-weight: $fw-2;
+            }
+        }
+    }
+
+    .navbar-contact {
+        margin-right: 0;
+        margin-left: 50px;
+
+        .navbar-button {
+            margin-right: 1.5rem;
+
+            .btn-contact {
+                @include d-flex(1rem, center, center);
+                text-decoration: none;
+                color: $color-white-3;
+                border: 1px solid $color-pink-1;
+
+                &:hover {
+                    background-color: $color-white-1;
+                    border: 1px solid $color-pink-1;
+                    color: $color-dark-1;
+                }
+            }
+        }
+    }
+}
+
+.banner {
+    position: relative;
+    height: 100vh;
+
+    .banner-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include d-flex(0, center, center);
+        padding-bottom: $pd-7;
+        padding-top: $pd-7;
+
+        .banner-left {
+            .heading {
+                font-size: $fs-7;
+                font-weight: $fw-3;
+                color: $color-pink;
+            }
+
+            .title {
+                font-size: 5.5rem;
+                line-height: 6.5rem;
+                color: $color-heading;
+                font-weight: $fw-3;
+            }
+        }
+    }
+
+    .pic-top {
+        position: relative;
+        top: 0;
+    }
+
+    .bottom-pic {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+
+// Responsive
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .navbar-expand-lg>.container {
+        justify-content: flex-start;
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
